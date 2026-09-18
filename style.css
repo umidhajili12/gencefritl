@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #172033;
+    background: #f5f7fb;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1261a0;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #172033;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #1261a0;
+}
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(10,45,80,.72),
+            rgba(10,45,80,.72)
+        ),
+        url("images/school.jpg") center/cover;
+}
+
+.hero h1 {
+    max-width: 850px;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+
+    background: #1683d8;
+    color: white;
+
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #0e69b0;
+}
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 8%;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 45px;
+}
+
+.section > p {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,.07);
+
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #1261a0;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+.contact {
+    background: #eaf3fa;
+    max-width: none;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: white;
+    background: #102d45;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
